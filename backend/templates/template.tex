@@ -1,0 +1,183 @@
+ \%-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-
+\% Resume in Latex \% Author : Vyom Pant \% Based off :
+https://github.com/sb2nov/resume \% License : MIT
+\%-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-
+
+\textbackslash documentclass{[}letterpaper,11pt{]}\{article\}
+
+\textbackslash usepackage\{changepage\}
+\textbackslash usepackage\{fontawesome5\}
+\textbackslash usepackage\{graphicx\}
+\textbackslash usepackage\{latexsym\}
+\textbackslash usepackage{[}empty{]}\{fullpage\}
+\textbackslash usepackage\{titlesec\}
+\textbackslash usepackage\{marvosym\}
+\textbackslash usepackage{[}usenames,dvipsnames{]}\{color\}
+\textbackslash usepackage\{verbatim\}
+\textbackslash usepackage\{enumitem\}
+\textbackslash usepackage{[}hidelinks{]}\{hyperref\}
+\textbackslash usepackage\{fancyhdr\}
+\textbackslash usepackage{[}english{]}\{babel\}
+\textbackslash usepackage\{tabularx\}
+
+\textbackslash input\{glyphtounicode\}
+
+\%-\/-\/-\/-\/-\/-\/-\/-\/-\/-FONT OPTIONS-\/-\/-\/-\/-\/-\/-\/-\/-\/-
+\% sans-serif \% \textbackslash usepackage{[}sfdefault{]}\{FiraSans\} \%
+\textbackslash usepackage{[}sfdefault{]}\{roboto\} \%
+\textbackslash usepackage{[}sfdefault{]}\{noto-sans\} \%
+\textbackslash usepackage{[}default{]}\{sourcesanspro\}
+
+\% serif \% \textbackslash usepackage\{CormorantGaramond\} \%
+\textbackslash usepackage\{charter\}
+
+\textbackslash pagestyle\{fancy\} \textbackslash fancyhf\{\} \% clear
+all header and footer fields \textbackslash fancyfoot\{\}
+\textbackslash renewcommand\{\textbackslash headrulewidth\}\{0pt\}
+\textbackslash renewcommand\{\textbackslash footrulewidth\}\{0pt\}
+
+\% Adjust margins
+\textbackslash addtolength\{\textbackslash oddsidemargin\}\{-0.5in\}
+\textbackslash addtolength\{\textbackslash evensidemargin\}\{-0.5in\}
+\textbackslash addtolength\{\textbackslash textwidth\}\{1in\}
+\textbackslash addtolength\{\textbackslash topmargin\}\{-.5in\}
+\textbackslash addtolength\{\textbackslash textheight\}\{1.0in\}
+
+\textbackslash urlstyle\{same\}
+
+\textbackslash raggedbottom \textbackslash raggedright
+\textbackslash setlength\{\textbackslash tabcolsep\}\{0in\}
+
+\% Sections formatting
+\textbackslash titleformat\{\textbackslash section\}\{
+\textbackslash vspace\{-4pt\}\textbackslash scshape\textbackslash raggedright\textbackslash large
+\}\{\}\{0em\}\{\}{[}\textbackslash color\{black\}\textbackslash titlerule
+\textbackslash vspace\{-5pt\}{]}
+
+\% Ensure that generate pdf is machine readable/ATS parsable
+\textbackslash pdfgentounicode=1
+
+\%-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-
+\% Custom commands
+\textbackslash newcommand\{\textbackslash resumeItem\}{[}1{]}\{
+\textbackslash item\textbackslash small\{ \{\#1
+\textbackslash vspace\{-2pt\}\} \} \}
+
+\textbackslash newcommand\{\textbackslash resumeSubheading\}{[}4{]}\{
+\textbackslash vspace\{-2pt\}\textbackslash item
+\textbackslash begin\{tabular*\}\{0.97\textbackslash textwidth\}{[}t{]}\{l@\{\textbackslash extracolsep\{\textbackslash fill\}\}r\}
+\textbackslash textbf\{\#1\} \& \#2 \textbackslash\textbackslash{}
+\textbackslash textit\{\textbackslash small\#3\} \&
+\textbackslash textit\{\textbackslash small \#4\}
+\textbackslash\textbackslash{}
+\textbackslash end\{tabular*\}\textbackslash vspace\{-7pt\} \}
+
+\textbackslash newcommand\{\textbackslash resumeSubSubheading\}{[}2{]}\{
+\textbackslash item
+\textbackslash begin\{tabular*\}\{0.97\textbackslash textwidth\}\{l@\{\textbackslash extracolsep\{\textbackslash fill\}\}r\}
+\textbackslash textit\{\textbackslash small\#1\} \&
+\textbackslash textit\{\textbackslash small \#2\}
+\textbackslash\textbackslash{}
+\textbackslash end\{tabular*\}\textbackslash vspace\{-7pt\} \}
+
+\textbackslash newcommand\{\textbackslash resumeProjectHeading\}{[}2{]}\{
+\textbackslash item
+\textbackslash begin\{tabular*\}\{0.97\textbackslash textwidth\}\{l@\{\textbackslash extracolsep\{\textbackslash fill\}\}r\}
+\textbackslash small\#1 \& \#2 \textbackslash\textbackslash{}
+\textbackslash end\{tabular*\}\textbackslash vspace\{-7pt\} \}
+
+\textbackslash newcommand\{\textbackslash resumeSubItem\}{[}1{]}\{\textbackslash resumeItem\{\#1\}\textbackslash vspace\{-4pt\}\}
+
+\textbackslash renewcommand\textbackslash labelitemii\{\$\textbackslash vcenter\{\textbackslash hbox\{\textbackslash tiny\$\textbackslash bullet\$\}\}\$\}
+
+\textbackslash newcommand\{\textbackslash resumeSubHeadingListStart\}\{\textbackslash begin\{itemize\}{[}leftmargin=0.15in,
+label=\{\}{]}\}
+\textbackslash newcommand\{\textbackslash resumeSubHeadingListEnd\}\{\textbackslash end\{itemize\}\}
+\textbackslash newcommand\{\textbackslash resumeItemListStart\}\{\textbackslash begin\{itemize\}\}
+\textbackslash newcommand\{\textbackslash resumeItemListEnd\}\{\textbackslash end\{itemize\}\textbackslash vspace\{-5pt\}\}
+
+\%-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-
+\%\%\%\%\%\%\%\%\%\%\% RESUME STARTS HERE \%\%\%\%\%\%\%\%\%\%\%
+
+\textbackslash begin\{document\}
+
+\%-\/-\/-\/-\/-\/-\/-\/-\/-\/-HEADING-\/-\/-\/-\/-\/-\/-\/-\/-\/-
+\textbackslash begin\{center\}
+\textbackslash textbf\{\textbackslash Huge \textbackslash scshape Your
+Name\} \textbackslash\textbackslash{} \textbackslash vspace\{1pt\} city,
+state, country \textbackslash\textbackslash{}
+\textbackslash vspace\{1pt\}
+\textbackslash small\textbackslash href\{tel:+xxxxxxxxxxxx\}\{\textbackslash raisebox\{-0.2\textbackslash height\}\{\textbackslash rotatebox{[}origin=c{]}\{270\}\textbackslash faPhone\}\textbackslash{}
+\textbackslash underline\{contactNo\}\} \$\textbar\$
+\textbackslash href\{mailto:emailId\}\{\textbackslash raisebox\{-0.2\textbackslash height\}\textbackslash faEnvelope\textbackslash{}
+\textbackslash underline\{emailId\}\} \$\textbar\$
+\textbackslash href\{linkedinId\}\{\textbackslash raisebox\{-0.2\textbackslash height\}\textbackslash faLinkedin\textbackslash{}
+\textbackslash underline\{linkedinId\}\} \$\textbar\$
+\textbackslash href\{githubId\}\{\textbackslash raisebox\{-0.2\textbackslash height\}\textbackslash faGithub\textbackslash{}
+\textbackslash underline\{githubId\}\} \$\textbar\$
+\textbackslash href\{portfolio\}\{\textbackslash raisebox\{-0.2\textbackslash height\}\textbackslash faUserTie\textbackslash{}
+\textbackslash underline\{Portfolio\}\}
+
+\textbackslash end\{center\}
+
+\%-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-SUMMARY-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-
+\textbackslash section\{Summary\}
+\textbackslash begin\{adjustwidth\}\{0.15in\}\{0in\} Your description
+with regards to aspiring job role. \textbackslash end\{adjustwidth\}
+
+\%-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-TECHNICAL
+SKILLS-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/- \textbackslash section\{Technical
+Skills\} \textbackslash begin\{itemize\}{[}leftmargin=0.15in,
+label=\{\}{]} \textbackslash small\{\textbackslash item\{
+\textbackslash textbf\{Languages\}\{: \} \textbackslash\textbackslash{}
+\textbackslash textbf\{Frameworks\}\{: \} \textbackslash\textbackslash{}
+\textbackslash textbf\{Developer Tools\}\{: \}
+\textbackslash\textbackslash{} \textbackslash textbf\{Libraries\}\{: \}
+\textbackslash\textbackslash{} \textbackslash textbf\{Problem
+Solving\}\{: \} \}\} \textbackslash end\{itemize\}
+
+\%-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-EDUCATION-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-
+\textbackslash section\{Education\}
+\textbackslash resumeSubHeadingListStart \textbackslash resumeSubheading
+\{Institute Name\}\{MM YYYY -\/- MM YYYY\} \{Degree Name -
+\textbackslash textbf\{grade\textbackslash\_type\} -
+\textbackslash textbf\{grade\}\}\{Location\}
+\textbackslash resumeSubHeadingListEnd \textbackslash vspace\{-9pt\}
+
+\%-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-EXPERIENCE-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-
+\textbackslash section\{Experience\}
+\textbackslash resumeSubHeadingListStart
+
+\textbackslash resumeSubheading \{Company/ Institution\}\{MM YYYY -\/-
+MM YYYY\} \{Position\}\{Location\} \textbackslash resumeItemListStart
+\textbackslash resumeItem\{\}
+
+\textbackslash resumeItemListEnd
+
+\textbackslash resumeSubHeadingListEnd
+
+\%-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-PROJECTS-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-
+\textbackslash section\{Projects\}
+\textbackslash resumeSubHeadingListStart
+\textbackslash resumeProjectHeading \{\textbackslash textbf\{Project
+Name\} \textbackslash href\{Project
+Link\}\{\textbackslash raisebox\{-0.1\textbackslash height\}\textbackslash faLink\}
+\$\textbar\$ \textbackslash emph\{tech stack\}\}\{MM YYYY -\/- MM YYYY\}
+\textbackslash resumeItemListStart \textbackslash resumeItem\{\}
+
+\textbackslash resumeItemListEnd
+
+\textbackslash resumeSubHeadingListEnd
+
+\%-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-EXTRACURRICULAR-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-
+\textbackslash section\{Extracurricular\}
+\textbackslash resumeSubHeadingListStart
+\textbackslash resumeSubheading\{Organization Name\}\{MM YYYY -\/- MM
+YYYY\} \{\{Position\}\}\{Location\} \textbackslash resumeItemListStart
+\textbackslash resumeItem\{\}
+
+\textbackslash resumeItemListEnd \textbackslash resumeSubHeadingListEnd
+
+\%-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-
+
+\textbackslash end\{document\}

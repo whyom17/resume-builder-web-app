@@ -1,0 +1,76 @@
+#leftblock{
+    width: 47%;
+    height: 92%;
+    background-color: aqua;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+nav{
+    width: 100%;
+    height: 50px;
+    background-color: red;
+}
+
+#form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+#personal-info{
+    width: 95%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px ;
+    background-color: antiquewhite;
+}
+#education{
+    width: 95%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px ;
+    background-color: antiquewhite;
+}
+#summary{
+    width: 95%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px ;
+    background-color: antiquewhite;
+}
+#tech-skills{
+    width: 95%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px ;
+    background-color: antiquewhite;
+}
+#experience{
+    width: 95%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px ;
+    background-color: antiquewhite;
+}
+#extracurricular{
+    width: 95%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px ;
+    background-color: antiquewhite;
+}
+#projects{
+    width: 95%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px ;
+    background-color: antiquewhite;
+}
