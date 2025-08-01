@@ -31,15 +31,15 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelevant variables.
 deactivate nondestructive
 
-setenv VIRTUAL_ENV 'C:\Users\whyom\Desktop\resume-builder-web-app\server\.venv'
+setenv VIRTUAL_ENV 'C:\Users\whyom\Desktop\resume-builder-web-app\backend\.venv'
 
 set _OLD_VIRTUAL_PATH="$PATH:q"
 setenv PATH "$VIRTUAL_ENV:q/Scripts:$PATH:q"
 
 
 
-if ('server' != "") then
-    setenv VIRTUAL_ENV_PROMPT 'server'
+if ('' != "") then
+    setenv VIRTUAL_ENV_PROMPT ''
 else
     setenv VIRTUAL_ENV_PROMPT "$VIRTUAL_ENV:t:q"
 endif

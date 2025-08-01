@@ -79,7 +79,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV 'C:\Users\whyom\Desktop\resume-builder-web-app\server\.venv'
+set -gx VIRTUAL_ENV 'C:\Users\whyom\Desktop\resume-builder-web-app\backend\.venv'
 
 # https://github.com/fish-shell/fish-shell/issues/436 altered PATH handling
 if test (echo $FISH_VERSION | head -c 1) -lt 3
@@ -91,8 +91,8 @@ set -gx PATH "$VIRTUAL_ENV"'/Scripts' $PATH
 
 # Prompt override provided?
 # If not, just use the environment name.
-if test -n 'server'
-    set -gx VIRTUAL_ENV_PROMPT 'server'
+if test -n ''
+    set -gx VIRTUAL_ENV_PROMPT ''
 else
     set -gx VIRTUAL_ENV_PROMPT (basename "$VIRTUAL_ENV")
 end

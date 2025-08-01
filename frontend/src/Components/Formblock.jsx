@@ -1,48 +1,61 @@
-import React from 'react'
-import '../styles/components/Formblock.css'
-import SectionOrder from './SectionOrder'
-import PersonalInfoForm from './PersonalInfoForm'
-import SummaryForm from './SummaryForm'
-import TechnicalSkillsForm from './TechnicalSkillsForm'
-import EducationalForm from './EducationalForm'
-import ExperienceForm from './ExperienceForm'
-import ProjectsForm from './ProjectsForm'
-import ExtracurricularForm from './ExtracurricularForm'
-
-// --- Component Map ---
-// const formComponentMap = {
-//     personalInfo: PersonalInfoForm,
-//     summary: SummaryForm,
-//     technicalSkills: TechnicalSkillsForm,
-//     education: EducationalForm,
-//     experience: ExperienceForm,
-//     projects: ProjectsForm,
-//     extracurricular: ExtracurricularForm,
-// };
-
+import {useState} from 'react'
+import SectionOrder from './SectionOrder';
 
 function Formblock() {
+  const [resumeData, setResumeData] = useState(()=>{
+    const saved =localStorage.getItem('resumeData')
+    return saved ? JSON.parse(saved) :     // checking whether the data is already present in the local storage or not
+    {
+      personal: {
+        name: "",location: "",contactNo: "",emailId: "",linkedIn: "",githubId: "",portfolio: ""
+      },
+      
+      summary: "",
+      
+      skills: {
+        languages: [],frameworks: [],devtools: [],libraries: [],problemsolving: []
+      },
+
+      education: [
+        {
+          institute: "",start: "",end: "",degree: "",grade: "",location: ""
+        }
+      ],
+    
+      experience: [
+        {
+          company: "",start: "",end: "",position: "",location: "",bullets: [""]
+        }
+      ],
+      
+      projects: [
+        {
+          name: "",link: "",tech: [],start: "",end: "",bullets: [""]
+        }
+      ],
+
+      extracurricular: [
+        {
+          org: "",start: "",end: "",position: "",location: "",bullets: [""]
+        }
+      ],
+      
+      sectionOrder:[
+        'personal', 'summary', 'education', 'experience', 'projects', 'skills', 'extracurricular'
+      ]
+    };
+    })      // here the function inside the useState ended
+  
+  
   return (
     <div id='leftblock'>
-    <nav>
-        Resume Details
-    </nav>
-    <div id='form-container'>
-        {/* The SectionOrder component to control the layout */}
-        <SectionOrder />
+    <nav>Resume Form</nav>
 
-        {/* Individual Form Components */}
-        <PersonalInfoForm />
-        <SummaryForm />
-        <TechnicalSkillsForm />
-        <EducationalForm />
-        <ExperienceForm />
-        <ProjectsForm />
-        <ExtracurricularForm />
-
+    <div id="form-container">
+      <SectionOrder data={resumeData}/>
     </div>
-    </div>
+  </div>
   )
 }
 
-export default Formblock
+export default Formblock;

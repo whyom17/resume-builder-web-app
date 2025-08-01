@@ -53,7 +53,7 @@ export-env {
       }
     }
 
-    let virtual_env = 'C:\Users\whyom\Desktop\resume-builder-web-app\server\.venv'
+    let virtual_env = 'C:\Users\whyom\Desktop\resume-builder-web-app\backend\.venv'
     let bin = 'Scripts'
 
     let is_windows = ($nu.os-info.family) == 'windows'
@@ -68,10 +68,10 @@ export-env {
     let new_path = ($env | get $path_name | prepend $venv_path)
 
     # If there is no default prompt, then use the env name instead
-    let virtual_env_prompt = (if ('server' | is-empty) {
+    let virtual_env_prompt = (if ('' | is-empty) {
         ($virtual_env | path basename)
     } else {
-        'server'
+        ''
     })
 
     let new_env = {

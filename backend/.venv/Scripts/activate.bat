@@ -25,9 +25,9 @@
     @"%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-@for %%i in ("C:\Users\whyom\Desktop\resume-builder-web-app\server\.venv") do @set "VIRTUAL_ENV=%%~fi"
+@for %%i in ("C:\Users\whyom\Desktop\resume-builder-web-app\backend\.venv") do @set "VIRTUAL_ENV=%%~fi"
 
-@set "VIRTUAL_ENV_PROMPT=server"
+@set "VIRTUAL_ENV_PROMPT="
 @if NOT DEFINED VIRTUAL_ENV_PROMPT (
     @for %%d in ("%VIRTUAL_ENV%") do @set "VIRTUAL_ENV_PROMPT=%%~nxd"
 )
