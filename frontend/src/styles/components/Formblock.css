@@ -1,22 +1,35 @@
 #leftblock{
     width: 47%;
     height: 92%;
-    background-color: aqua;
-    border-radius: 15px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
     position: relative;
     overflow: hidden;
+    border: 2px solid white;
+}
+.glass {
+  background: rgba(255, 255, 255, 0.1);      /* semi-transparent */
+  border-radius: 16px;                       /* smooth corners */
+  backdrop-filter: blur(10px);               /* frosted effect */
+  -webkit-backdrop-filter: blur(10px);       /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* subtle border */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);  /* soft shadow */
 }
 
 nav{
     width: 100%;
     height: 50px;
+    color:white;
     margin-bottom: 13px;
-    background-color: red;
+    background-color: #565254;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 25px;
     font-weight: 700;
+    border: 2px solid white;
 }
 
 #form-container{
@@ -25,7 +38,6 @@ nav{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
     padding-left: 15px;
     padding-right: 15px;
     position: absolute;
@@ -48,7 +60,7 @@ heading{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-radius: 10px ;
+    border-radius: 5px ;
     background-color: antiquewhite;
 }
 

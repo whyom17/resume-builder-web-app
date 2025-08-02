@@ -4,7 +4,7 @@ import '../styles/components/Formblock.css'
 function PersonalInfoForm({data}) {
   return (
     <div id='personal-info'>
-      <heading>Personal Details</heading>
+      <h3>Personal Details</h3>
       <form>
         <label >Name: </label>
         <input type="text" placeholder='full name' /><br />

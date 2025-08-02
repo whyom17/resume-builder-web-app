@@ -5,7 +5,7 @@ import Resumeblock from './Components/Resumeblock'
 function App() {
   return (
   <>
-    <Formblock />
+    <Formblock  className="glass"/>
     <Resumeblock />
   </>
   )
